@@ -8,6 +8,8 @@ import com.example.android_proyecto.Models.User;
 import com.example.android_proyecto.Models.UserLogIn;
 import com.example.android_proyecto.Models.UserRegister;
 import com.example.android_proyecto.Models.Video;
+import com.example.android_proyecto.Models.Event;
+import com.example.android_proyecto.Models.RegisterResponse;
 
 import java.util.List;
 
@@ -85,4 +87,13 @@ public interface ApiService {
 
     @GET("info/videos")
     Call<List<Video>> getVideos();
+
+    // --- EVENTS ---
+
+    @GET("events")
+    Call<List<Event>> getEvents();
+
+    @POST("events/{id}/register")
+    Call<RegisterResponse> registerToEvent(@Path("id") int id);
+
 }

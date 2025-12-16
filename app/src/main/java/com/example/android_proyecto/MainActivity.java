@@ -10,6 +10,7 @@ import com.example.android_proyecto.Activities.FaqActivity;
 import com.example.android_proyecto.Activities.LogInActivity;
 import com.example.android_proyecto.Activities.RegisterActivity;
 import com.example.android_proyecto.Activities.VideoActivity;
+import com.example.android_proyecto.Activities.EventsActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnGoLogin = findViewById(R.id.btnGoLogin);
         Button btnGoRegister = findViewById(R.id.btnGoRegister);
         Button btnFaq = findViewById(R.id.btnFaq);
-        Button btnVideo = findViewById(R.id.btnVideo);
+        Button btnEvents = findViewById(R.id.btnEvents);
 
         btnGoLogin.setOnClickListener(v ->
                 startActivity(new Intent(MainActivity.this, LogInActivity.class)));
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         btnFaq.setOnClickListener(v ->
                 startActivity(new Intent(MainActivity.this, FaqActivity.class)));
 
-        btnVideo.setOnClickListener(v ->
-                startActivity(new Intent(MainActivity.this, VideoActivity.class)));
+        btnEvents.setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, EventsActivity.class)));
     }
 }
